@@ -25,7 +25,7 @@ dependencies {
 
 bootBuildImage {
 	imageName = "${project.property("registryUrl")}/${project.name}:${project.version}"
-	publish = true
+
 	docker {
 		publishRegistry {
 			username = project.property("registryUsername")
