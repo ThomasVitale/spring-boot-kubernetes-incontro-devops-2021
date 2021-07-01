@@ -1,5 +1,7 @@
 package com.thomasvitale.demoservice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Mono;
 
 import org.springframework.boot.SpringApplication;
@@ -21,7 +23,7 @@ public class DemoServiceApplication {
 
 @RestController
 class DemoController {
-
+	private static final Logger log = LoggerFactory.getLogger(DemoController.class);
 	private final DemoProperties demoProperties;
 
 	DemoController(DemoProperties demoProperties) {
@@ -30,7 +32,8 @@ class DemoController {
 
 	@GetMapping("/")
 	public Mono<String> getMessage() {
-		return Mono.just(demoProperties.getMessage());
+		return Mono.just(demoProperties.getMessage())
+				.doFirst(() -> log.info("Getting message..."));
 	}
 
 }
