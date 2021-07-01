@@ -7,6 +7,5 @@ Demonstration of:
 - Cloud native development with Spring Boot and Reactive Spring
 - Containerization with Cloud Native Buildpacks
 - Kubernetes deployment manifests, graceful shutdown, and health probes
-- Spring Boot configuration through ConfigMaps
-- Native executables with Spring Native and GraalVM
-- Service discovery and load balancing with Kubernetes
+- Spring Boot configuration through ConfigMaps and Secrets
+- Cloud native operations with GitOps and FluxCD

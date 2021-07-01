@@ -5,7 +5,7 @@ metadata:
 data:
   application.yml: |
     demo:
-      message: Welcome to Spring Boot on Kubernetes from Flux!
+      message: Welcome to Spring Boot on Kubernetes!
     server:
       shutdown: graceful
     spring:

@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Delivery Pipeline
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   package-demo:
-    name: Demo Service - Build and Build and Publish Image
+    name: Demo Service - Build and Publish Image
     runs-on: ubuntu-20.04
     steps:
       - name: Check out repository
